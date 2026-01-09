@@ -1,0 +1,30 @@
+# Full-run example (edit paths to match your local LigandMPNN installation)
+# NOTE: This file uses an absolute path to the LigandMPNN runner and a conda env.
+# If you do not have LigandMPNN locally, use `examples/binder_recharge_demo.yaml` instead.
+
+# Example config for running with a local LigandMPNN installation.
+# Install LigandMPNN here: https://github.com/dauparas/LigandMPNN/
+# Edit `ligandmpnn_run_py` and `ligandmpnn_conda_env` below to match your setup.
+
+input_structure: "examples/nipah_binder.pdb"
+out_folder: "outputs/nipah_binder_recharge/"
+
+# If single-chain, you can omit. If multi-chain, set which chain you are redesigning.
+redesign_chain: "A"
+
+# Exclude specific residues from redesign (e.g., binding hot-spots)
+# Format recommendation: chain+resnum (same as your liganmpnn "A3" style).
+avoid_residues: ["A143", "A147"]
+avoid_residues_distance: 0  # Å; 0 means "only those exact residues"
+
+# If chain B is the target, also avoid interface residues on chain A that contact chain B
+avoid_interface_residues_with_chain: "T"
+avoid_interface_residues_with_chain_distance: 6.0  # Å
+
+desired_chain_charge: 5.0
+tolerance: 1.0
+
+# Set this to the path of your LigandMPNN `run.py` file (edit for your installation)
+ligandmpnn_run_py: "/home/tadas/code/LigandMPNN/run.py"
+# Name of conda environment with LigandMPNN installed, or leave empty to use current env
+ligandmpnn_conda_env: "ligandmpnn_env"
