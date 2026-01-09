@@ -4,7 +4,7 @@
   <img src="images/ProteinRecharge_transparent.png" alt="ProteinRecharge logo" width="500"/>
 </p>
 
-ProteinRecharge is a small utility for recharging protein surfaces after binder design pipelines produce inappropriately charged binders, using LigandMPNN outputs.
+ProteinRecharge is a small utility for recharging protein surfaces after binder design pipelines produce inappropriately charged binders. Requires LigandMPNN for sequence redesign.
 
 ## Quick start ✅
 
