@@ -13,18 +13,19 @@ ProteinRecharge is a small utility for recharging protein surfaces after binder 
 ```bash
 git clone https://github.com/profdocpizza/ProteinRecharge.git
 cd ProteinRecharge
-# Follow LigandMPNN instructions to install it and download weights, e.g.:
-# https://github.com/dauparas/LigandMPNN/
+
 ```
 
-2. Edit `examples/binder_recharge.yaml` and set the following fields for your environment:
+2. Follow [LigandMPNN](https://github.com/dauparas/LigandMPNN/) instructions to install it and download weights 
+
+3. Edit `examples/binder_recharge.yaml` and set the following fields for your environment:
 
 ```yaml
 ligandmpnn_run_py: "/path/to/LigandMPNN/run.py"   # path to the LigandMPNN runner
 ligandmpnn_conda_env: "ligandmpnn_env"          # or "" to use the current env
 ```
 
-3. Run the pipeline:
+4. Run the pipeline:
 
 ```bash
 python recharge.py examples/binder_recharge.yaml
