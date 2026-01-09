@@ -82,7 +82,3 @@ It will use biopython's SASA to identify burried residues. Also, it will account
 ```bash
 python recharge.py examples/binder_recharge.yaml
 ```
-
-## Contributing 
-
-PRs welcome — please include a short description and a reproducible example when opening issues.
